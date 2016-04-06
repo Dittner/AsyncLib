@@ -1,7 +1,6 @@
 package dittner.async {
 public class ClassUtils {
-	public function ClassUtils() {
-	}
+	public function ClassUtils() {}
 
 	public static function instantiate(clazz:Class, args:Array = null):* {
 		var result:*;

@@ -1,5 +1,5 @@
 package dittner.async.utils {
-import dittner.async.Async;
+import dittner.async.AsyncCallbacksLib;
 
 import flash.events.Event;
 import flash.events.EventDispatcher;
@@ -10,7 +10,7 @@ public class FrameTimer extends EventDispatcher {
 		this.delayFrames = delayFrames == 0 ? 1 : delayFrames;
 		completeFunc = callbackFunc;
 		if (completeFunc == null) throw new Error("callbackFunc == null!");
-		if (!Async.stage) throw new Error("Set at first stage using by Async class")
+		if (!AsyncCallbacksLib.stage) throw new Error("Set at first stage using by Async class")
 	}
 
 	//----------------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ public class FrameTimer extends EventDispatcher {
 	public function start():void {
 		if (!running) {
 			setRunning(true);
-			Async.stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+			AsyncCallbacksLib.stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 		}
 	}
 
@@ -61,7 +61,7 @@ public class FrameTimer extends EventDispatcher {
 		if (running) {
 			setRunning(false);
 			wentFrames = 0;
-			Async.stage.removeEventListener(Event.ENTER_FRAME, enterFrameHandler);
+			AsyncCallbacksLib.stage.removeEventListener(Event.ENTER_FRAME, enterFrameHandler);
 		}
 	}
 
@@ -69,7 +69,7 @@ public class FrameTimer extends EventDispatcher {
 		wentFrames++;
 		if (wentFrames >= delayFrames) {
 			setRunning(false);
-			Async.stage.removeEventListener(Event.ENTER_FRAME, enterFrameHandler);
+			AsyncCallbacksLib.stage.removeEventListener(Event.ENTER_FRAME, enterFrameHandler);
 			wentFrames = 0;
 			completeFunc();
 		}

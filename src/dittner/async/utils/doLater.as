@@ -1,7 +1,7 @@
 package dittner.async.utils {
-import dittner.async.Async;
+import dittner.async.AsyncCallbacksLib;
 
 public function doLater(method:Function, delayMSec:int = 50):Number {
-	return FTimer.execFunc(method, Math.ceil(Async.fps * delayMSec / 1000));
+	return FTimer.execFunc(method, Math.ceil(AsyncCallbacksLib.fps * delayMSec / 1000));
 }
 }
