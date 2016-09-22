@@ -1,4 +1,4 @@
-package dittner.async.utils {
+package de.dittner.async.utils {
 public class FTimer {
 	public function FTimer() {}
 

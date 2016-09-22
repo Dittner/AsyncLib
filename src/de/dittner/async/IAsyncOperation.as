@@ -1,4 +1,4 @@
-package dittner.async {
+package de.dittner.async {
 public interface IAsyncOperation {
 	function addCompleteCallback(handler:Function):void;
 	function dispatchSuccess(result:* = null):void;

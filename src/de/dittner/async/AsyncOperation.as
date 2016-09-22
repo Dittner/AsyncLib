@@ -1,7 +1,7 @@
-package dittner.async {
-import dittner.async.utils.clearDelay;
-import dittner.async.utils.doLaterInSec;
-import dittner.async.utils.invalidateOf;
+package de.dittner.async {
+import de.dittner.async.utils.clearDelay;
+import de.dittner.async.utils.doLaterInSec;
+import de.dittner.async.utils.invalidateOf;
 
 public class AsyncOperation implements IAsyncOperation {
 	public function AsyncOperation() {}

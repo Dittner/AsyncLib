@@ -1,4 +1,4 @@
-package dittner.async {
+package de.dittner.async {
 public class CompositeCommand extends ProgressCommand {
 	public function CompositeCommand() {
 		super();

@@ -1,4 +1,4 @@
-package dittner.async {
+package de.dittner.async {
 
 public class RunProgressOperationCmd extends ProgressOperation implements IAsyncCommand {
 	public function RunProgressOperationCmd(operationGenerator:Function, argArray:Array = null) {

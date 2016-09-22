@@ -1,4 +1,4 @@
-package dittner.async {
+package de.dittner.async {
 import flash.display.Stage;
 
 public class AsyncCallbacksLib {

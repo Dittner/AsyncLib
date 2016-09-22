@@ -1,4 +1,4 @@
-package dittner.async {
+package de.dittner.async {
 public class ProgressCommand extends AsyncCommand {
 	public function ProgressCommand() {
 		super();

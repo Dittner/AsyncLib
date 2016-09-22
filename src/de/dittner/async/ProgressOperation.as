@@ -1,4 +1,4 @@
-package dittner.async {
+package de.dittner.async {
 public class ProgressOperation extends AsyncOperation {
 	public function ProgressOperation() {
 		super();
@@ -27,7 +27,7 @@ public class ProgressOperation extends AsyncOperation {
 	}
 
 	protected function notifyProgressChanged():void {
-		for each(var handler:Function in addProgressCallbackQueue) handler(this);
+		for each(var handler:Function in addProgressCallbackQueue) handler(progress/total);
 	}
 }
 }

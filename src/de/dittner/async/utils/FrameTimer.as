@@ -1,5 +1,5 @@
-package dittner.async.utils {
-import dittner.async.AsyncCallbacksLib;
+package de.dittner.async.utils {
+import de.dittner.async.AsyncCallbacksLib;
 
 import flash.events.Event;
 import flash.events.EventDispatcher;

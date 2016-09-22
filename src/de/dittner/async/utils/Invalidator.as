@@ -1,4 +1,4 @@
-package dittner.async.utils {
+package de.dittner.async.utils {
 import flash.events.TimerEvent;
 
 public class Invalidator {

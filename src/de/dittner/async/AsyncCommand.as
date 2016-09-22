@@ -1,4 +1,4 @@
-package dittner.async {
+package de.dittner.async {
 public class AsyncCommand extends AsyncOperation implements IAsyncCommand {
 	public function AsyncCommand() {
 		super();
