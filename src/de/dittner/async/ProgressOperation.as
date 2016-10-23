@@ -27,7 +27,8 @@ public class ProgressOperation extends AsyncOperation {
 	}
 
 	protected function notifyProgressChanged():void {
-		for each(var handler:Function in addProgressCallbackQueue) handler(progress/total);
+		for each(var handler:Function in addProgressCallbackQueue)
+			if (total != 0) handler(progress / total);
 	}
 }
 }
