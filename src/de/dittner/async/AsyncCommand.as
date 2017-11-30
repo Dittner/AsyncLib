@@ -20,5 +20,11 @@ public class AsyncCommand extends AsyncOperation implements IAsyncCommand {
 		completeExecute();
 	}
 
+	override public function dispatchCancel():void {
+		_isCanceled = true;
+		_isSuccess = false;
+		completeExecute();
+	}
+
 }
 }

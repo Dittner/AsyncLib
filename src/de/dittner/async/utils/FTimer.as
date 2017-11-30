@@ -21,7 +21,7 @@ public class FTimer {
 	//----------------------------------------------------------------------------------------------
 
 	private static var instance:FTimer = new FTimer();
-	public static function execFunc(testFunc:Function, delayFrames:int):int {
+	public static function execFunc(testFunc:Function, delayFrames:int):Number {
 		return instance.add(testFunc, delayFrames);
 	}
 

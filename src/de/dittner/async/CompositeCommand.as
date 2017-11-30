@@ -35,7 +35,7 @@ public class CompositeCommand extends ProgressCommand {
 		}
 	}
 
-	override public function destroy():void {
+	override protected function destroy():void {
 		executing = false;
 		opClassInfoQueue.length = 0;
 		opProgressAfterCompleteQueue.length = 0;

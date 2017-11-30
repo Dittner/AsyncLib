@@ -7,7 +7,7 @@ public class ProgressOperation extends AsyncOperation {
 	//--------------------------------------
 	//  total
 	//--------------------------------------
-	protected var _total:Number;
+	protected var _total:Number = 0;
 	public function get total():Number {return _total;}
 
 	//--------------------------------------

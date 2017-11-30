@@ -37,8 +37,14 @@ public class AsyncOperation implements IAsyncOperation {
 	//--------------------------------------
 	//  isSuccess
 	//--------------------------------------
-	protected var _isSuccess:Boolean;
+	protected var _isSuccess:Boolean = false;
 	public function get isSuccess():Boolean {return _isSuccess;}
+
+	//--------------------------------------
+	//  isCanceled
+	//--------------------------------------
+	protected var _isCanceled:Boolean = false;
+	public function get isCanceled():Boolean {return _isCanceled;}
 
 	//--------------------------------------
 	//  isProcessing
@@ -100,6 +106,12 @@ public class AsyncOperation implements IAsyncOperation {
 		invalidateOf(completeExecute);
 	}
 
+	public function dispatchCancel():void {
+		_isCanceled = true;
+		_isSuccess = false;
+		invalidateOf(completeExecute);
+	}
+
 	protected function completeExecute():void {
 		_isProcessing = false;
 		for each(var handler:Function in completeCallbackQueue) handler(this);
@@ -107,7 +119,7 @@ public class AsyncOperation implements IAsyncOperation {
 		destroy();
 	}
 
-	public function destroy():void {
+	protected function destroy():void {
 		removeAllCallbacks();
 	}
 
